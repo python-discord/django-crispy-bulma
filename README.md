@@ -4,13 +4,13 @@
 
 ## About
 
-This is a Django application to add `django-crispy-forms` layout objects for [Bulma](https://bulma.io/). 
-It is a fork of [crispy-forms-bulma](https://github.com/jhotujec/crispy-forms-bulma) by Jure Hotujec, with the intention 
+This is a Django application to add `django-crispy-forms` layout objects for [Bulma](https://bulma.io/).
+It is a fork of [crispy-forms-bulma](https://github.com/jhotujec/crispy-forms-bulma) by Jure Hotujec, with the intention
 of adding support for Django 2.0+, as well as for components found in the bulma-extensions library.
 
 ## Installation
 
-You can install `django-crispy-bulma` from [PyPI](https://pypi.org/project/django-crispy-bulma/) by running `pip install django-crispy-bulma`. Make sure you also have `django-crispy-forms` installed, as it will not work without it. In order to activate it, you'll need to modify your projects `settings.py` file. 
+You can install `django-crispy-bulma` from [PyPI](https://pypi.org/project/django-crispy-bulma/) by running `pip install django-crispy-bulma`. Make sure you also have `django-crispy-forms` installed, as it will not work without it. In order to activate it, you'll need to modify your projects `settings.py` file.
 
 First, add `django-crispy-bulma` to your `INSTALLED_APPS`:
 
@@ -113,13 +113,13 @@ class MyForm(forms.Form):
     )
     my_file = FileField(
         label="Upload your actual dog in .dog format",
-        required=True    
+        required=True  
     )
-    
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.helper = FormHelper()
-        
+
         self.helper.layout = Layout(
             UploadField("my_image"),
             UploadField("my_file"),

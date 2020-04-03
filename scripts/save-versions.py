@@ -7,13 +7,13 @@ releases automatically.
 """
 
 import json
-import subprocess  # noqa
+import subprocess
 
-git_hash = subprocess.check_output(   # noqa
+git_hash = subprocess.check_output(
     ("git", "rev-parse", "--long", "HEAD")
 ).decode("UTF-8").split("\n")[1]
 
-package_version = subprocess.check_output(  # noqa
+package_version = subprocess.check_output(
     ("python", "setup.py", "--version")
 ).decode("UTF-8").strip("\n")
 
